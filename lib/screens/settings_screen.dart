@@ -17,17 +17,17 @@ class SettingsScreen extends StatelessWidget{
             const SizedBox(height:12),
             _Group(children:[
               SwitchListTile.adaptive(
-                value:showTimer,onChanged:onTimerChanged,activeColor:const Color(0xFF00FFFF),
+                value:showTimer,onChanged:onTimerChanged,activeThumbColor:const Color(0xFF00FFFF),
                 title:const Text('Mostrar cronômetro',style:TextStyle(color:Colors.white)),
                 subtitle:const Text('O tempo continua valendo mesmo oculto.',style:TextStyle(color:Colors.white38)),
               ),
               SwitchListTile.adaptive(
-                value:vibrationEnabled,onChanged:onVibrationChanged,activeColor:const Color(0xFF00FFFF),
+                value:vibrationEnabled,onChanged:onVibrationChanged,activeThumbColor:const Color(0xFF00FFFF),
                 title:const Text('Vibração',style:TextStyle(color:Colors.white)),
                 subtitle:const Text('Feedback tátil nas respostas.',style:TextStyle(color:Colors.white38)),
               ),
               SwitchListTile.adaptive(
-                value:animationsEnabled,onChanged:onAnimationsChanged,activeColor:const Color(0xFF00FFFF),
+                value:animationsEnabled,onChanged:onAnimationsChanged,activeThumbColor:const Color(0xFF00FFFF),
                 title:const Text('Animações',style:TextStyle(color:Colors.white)),
                 subtitle:const Text('Desative para aliviar aparelhos mais fracos.',style:TextStyle(color:Colors.white38)),
               ),
