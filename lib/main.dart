@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'data/cosmic_game.dart';
 import 'screens/home_screen.dart';
 import 'screens/loading_screen.dart';
 import 'screens/result_screen.dart';
