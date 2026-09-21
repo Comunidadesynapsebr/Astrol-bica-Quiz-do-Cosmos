@@ -20,7 +20,7 @@ class _LoadingScreenState extends State<LoadingScreen> with SingleTickerProvider
     _pulse=AnimationController(vsync:this,duration:const Duration(milliseconds:850),lowerBound:.95,upperBound:1.05)..repeat(reverse:true);
     _timer=Timer.periodic(const Duration(milliseconds:30),(timer){
       if(!mounted||_finished)return;
-      setState(()=>_progress=(_progress+2).clamp(0,100));
+      setState(()=>_progress=(_progress+2).clamp(0,100).toInt());
       if(_progress>=100){
         _finished=true;
         timer.cancel();
