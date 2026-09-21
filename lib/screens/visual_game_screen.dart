@@ -139,7 +139,7 @@ class _VisualGameScreenState extends State<VisualGameScreen> with SingleTickerPr
                 child:SingleChildScrollView(
                   child:Column(children:[
                     ScaleTransition(
-                      scale:widget.animationsEnabled?pulse:const AlwaysStoppedAnimation(1),
+                      scale:widget.animationsEnabled?pulse:const AlwaysStoppedAnimation<double>(1),
                       child:_ImageCard(url:question.imageUrl,round:current+1),
                     ),
                     const SizedBox(height:14),
