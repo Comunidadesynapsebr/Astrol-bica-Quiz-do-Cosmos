@@ -77,7 +77,7 @@ class ResultScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          '${score}/${total}',
+                          '$score/$total',
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 52,
@@ -85,7 +85,7 @@ class ResultScreen extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          '${percent}% de acerto',
+                          '$percent% de acerto',
                           style: const TextStyle(
                             color: Color(0xFFB8C7FF),
                             fontWeight: FontWeight.w700,
@@ -95,13 +95,13 @@ class ResultScreen extends StatelessWidget {
                         _ResultRow(
                           icon: Icons.stars_rounded,
                           label: 'Estrelas ganhas',
-                          value: '+${coinsEarned}',
+                          value: '+$coinsEarned',
                         ),
                         const SizedBox(height: 10),
                         _ResultRow(
                           icon: Icons.radar_rounded,
                           label: 'Sinais processados',
-                          value: '${answered}/${total}',
+                          value: '$answered/$total',
                         ),
                       ],
                     ),
