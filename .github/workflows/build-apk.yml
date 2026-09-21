@@ -20,6 +20,14 @@ jobs:
       - name: Generate Android project
         run: flutter create . --platforms=android
 
+      # flutter create can regenerate project files in the working tree.
+      # Restore the repository's real Dart sources and remove the generated
+      # placeholder test before analysis/build.
+      - name: Restore app sources
+        run: |
+          git checkout -- lib
+          rm -rf test
+
       - name: Get dependencies
         run: flutter pub get
 
