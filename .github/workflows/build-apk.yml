@@ -20,6 +20,18 @@ jobs:
       - name: Generate Android project
         run: flutter create . --platforms=android
 
+      - name: Allow network images in release
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("android/app/src/main/AndroidManifest.xml")
+          s = p.read_text()
+          permission = '    <uses-permission android:name="android.permission.INTERNET" />\n'
+          if "android.permission.INTERNET" not in s:
+              s = s.replace("    <application", permission + "    <application", 1)
+          p.write_text(s)
+          PY
+
       # Keep only generated Android/tooling files; restore the committed app.
       - name: Restore app sources
         run: |
