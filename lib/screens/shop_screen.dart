@@ -113,7 +113,7 @@ class ShopScreen extends StatelessWidget {
                   onBuy: onBuyTime,
                   level: timeMax
                       ? 'MÁXIMO'
-                      : 'NÍVEL ${timeLevel}/4',
+                      : 'NÍVEL $timeLevel/4',
                 ),
                 const SizedBox(height: 14),
                 _Upgrade(
@@ -126,7 +126,7 @@ class ShopScreen extends StatelessWidget {
                   onBuy: onBuyLife,
                   level: lifeMax
                       ? 'MÁXIMO'
-                      : 'NÍVEL ${bonusLives}/2',
+                      : 'NÍVEL $bonusLives/2',
                 ),
                 const SizedBox(height: 22),
                 const Text(
