@@ -26,7 +26,113 @@ class ResultScreen extends StatelessWidget{
                   width:double.infinity,padding:const EdgeInsets.all(24),
                   decoration:BoxDecoration(color:const Color(0xFF0B1021),borderRadius:BorderRadius.circular(24),border:Border.all(color:const Color(0xFF8A2BE2))),
                   child:Column(children:[
-                    Text(score.toString()+'/'+total.toString(),style:const TextStyle(color:Colors.white,fontSize:52,fontWeight:FontWeight.w900)),
+                    Text(',style:const TextStyle(color:Colors.white,fontSize:52,fontWeight:FontWeight.w900)),
+                    Text('$percent% de acerto',style:const TextStyle(color:Color(0xFFB8C7FF),fontWeight:FontWeight.w700)),
+                    const SizedBox(height:20),
+                    _Row(Icons.stars_rounded,'Estrelas ganhas','+$coinsEarned'),
+                    const SizedBox(height:10),
+                    _Row(Icons.radar_rounded,'Sinais processados','),
+                  ]),
+                ),
+                const SizedBox(height:22),
+                SizedBox(
+                  width:double.infinity,height:56,
+                  child:ElevatedButton.icon(
+                    onPressed:onReplay,
+                    icon:const Icon(Icons.replay_rounded),
+                    label:const Text('Jogar novamente'),
+                    style:ElevatedButton.styleFrom(
+                      backgroundColor:const Color(0xFF8A2BE2),foregroundColor:Colors.white,
+                      shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(16)),
+                      textStyle:const TextStyle(fontSize:16,fontWeight:FontWeight.w800),
+                    ),
+                  ),
+                ),
+                TextButton.icon(onPressed:onHome,icon:const Icon(Icons.home_rounded),label:const Text('Voltar ao menu')),
+              ]),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Row extends StatelessWidget{
+  final IconData icon;final String label,value;
+  const _Row(this.icon,this.label,this.value);
+  @override Widget build(BuildContext context)=>Row(children:[Icon(icon,color:const Color(0xFF00FFFF),size:20),const SizedBox(width:10),Expanded(child:Text(label,style:const TextStyle(color:Colors.white54,fontSize:13))),Text(value,style:const TextStyle(color:Colors.white,fontWeight:FontWeight.w800))]);
+}
++'{score}/${total}',style:const TextStyle(color:Colors.white,fontSize:52,fontWeight:FontWeight.w900)),
+                    Text('$percent% de acerto',style:const TextStyle(color:Color(0xFFB8C7FF),fontWeight:FontWeight.w700)),
+                    const SizedBox(height:20),
+                    _Row(Icons.stars_rounded,'Estrelas ganhas','+$coinsEarned'),
+                    const SizedBox(height:10),
+                    _Row(Icons.radar_rounded,'Sinais processados',answered.toString()+'/'+total.toString()),
+                  ]),
+                ),
+                const SizedBox(height:22),
+                SizedBox(
+                  width:double.infinity,height:56,
+                  child:ElevatedButton.icon(
+                    onPressed:onReplay,
+                    icon:const Icon(Icons.replay_rounded),
+                    label:const Text('Jogar novamente'),
+                    style:ElevatedButton.styleFrom(
+                      backgroundColor:const Color(0xFF8A2BE2),foregroundColor:Colors.white,
+                      shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(16)),
+                      textStyle:const TextStyle(fontSize:16,fontWeight:FontWeight.w800),
+                    ),
+                  ),
+                ),
+                TextButton.icon(onPressed:onHome,icon:const Icon(Icons.home_rounded),label:const Text('Voltar ao menu')),
+              ]),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Row extends StatelessWidget{
+  final IconData icon;final String label,value;
+  const _Row(this.icon,this.label,this.value);
+  @override Widget build(BuildContext context)=>Row(children:[Icon(icon,color:const Color(0xFF00FFFF),size:20),const SizedBox(width:10),Expanded(child:Text(label,style:const TextStyle(color:Colors.white54,fontSize:13))),Text(value,style:const TextStyle(color:Colors.white,fontWeight:FontWeight.w800))]);
+}
++'{answered}/${total}'),
+                  ]),
+                ),
+                const SizedBox(height:22),
+                SizedBox(
+                  width:double.infinity,height:56,
+                  child:ElevatedButton.icon(
+                    onPressed:onReplay,
+                    icon:const Icon(Icons.replay_rounded),
+                    label:const Text('Jogar novamente'),
+                    style:ElevatedButton.styleFrom(
+                      backgroundColor:const Color(0xFF8A2BE2),foregroundColor:Colors.white,
+                      shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(16)),
+                      textStyle:const TextStyle(fontSize:16,fontWeight:FontWeight.w800),
+                    ),
+                  ),
+                ),
+                TextButton.icon(onPressed:onHome,icon:const Icon(Icons.home_rounded),label:const Text('Voltar ao menu')),
+              ]),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Row extends StatelessWidget{
+  final IconData icon;final String label,value;
+  const _Row(this.icon,this.label,this.value);
+  @override Widget build(BuildContext context)=>Row(children:[Icon(icon,color:const Color(0xFF00FFFF),size:20),const SizedBox(width:10),Expanded(child:Text(label,style:const TextStyle(color:Colors.white54,fontSize:13))),Text(value,style:const TextStyle(color:Colors.white,fontWeight:FontWeight.w800))]);
+}
++'{score}/${total}',style:const TextStyle(color:Colors.white,fontSize:52,fontWeight:FontWeight.w900)),
                     Text('$percent% de acerto',style:const TextStyle(color:Color(0xFFB8C7FF),fontWeight:FontWeight.w700)),
                     const SizedBox(height:20),
                     _Row(Icons.stars_rounded,'Estrelas ganhas','+$coinsEarned'),
