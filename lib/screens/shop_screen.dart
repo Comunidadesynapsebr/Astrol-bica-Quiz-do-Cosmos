@@ -55,7 +55,7 @@ class ShopScreen extends StatelessWidget{
                 const SizedBox(height:8),
                 const Text(
                   '10 segundos base, upgrades limitados e custos crescentes. Acertos rápidos rendem até 20 estrelas, mantendo a habilidade como principal vantagem.',
-                  style:TextStyle(color:Colors.white45,fontSize:12,height:1.5),
+                  style:TextStyle(color:Colors.white54,fontSize:12,height:1.5),
                 ),
               ],
             ),
