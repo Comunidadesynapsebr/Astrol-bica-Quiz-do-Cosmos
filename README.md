@@ -24,3 +24,7 @@ flutter build apk --release
 APK: build/app/outputs/flutter-apk/app-release.apk
 
 O projeto não usa dependências externas além do Flutter.
+
+## Publicidade e app-ads.txt
+
+O arquivo `app-ads.txt` na raiz contém as linhas de vendedores autorizados fornecidas para a monetização. Para que exchanges e compradores consigam validá-lo, ele também precisa ser publicado no domínio de desenvolvedor associado à ficha do aplicativo, em `/app-ads.txt`; manter o arquivo somente no repositório não publica esse endpoint no domínio.
