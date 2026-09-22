@@ -48,8 +48,23 @@ jobs:
       - name: Analyze
         run: flutter analyze
 
-      - name: Build release APK
-        run: flutter build apk --release
+      - name: Build obfuscated release APK
+        run: |
+          rm -rf build/symbols/astroquiz
+          flutter build apk --release \\
+            --obfuscate \\
+            --split-debug-info=build/symbols/astroquiz
+
+      - name: Verify release artifact
+        run: |
+          test -s build/app/outputs/flutter-apk/app-release.apk
+          test -d build/symbols/astroquiz
+
+      - name: Upload obfuscation symbols
+        uses: actions/upload-artifact@v4
+        with:
+          name: astrolabica-quiz-cosmos-symbols
+          path: build/symbols/astroquiz
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
