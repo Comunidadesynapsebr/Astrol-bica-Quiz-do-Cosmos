@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'security/asteios_artenos.dart';
 import 'data/cosmic_game.dart';
 import 'screens/home_screen.dart';
 import 'screens/loading_screen.dart';
@@ -12,8 +13,9 @@ const Color kSpaceNavy=Color(0xFF0B1021);
 const Color kGalacticPurple=Color(0xFF8A2BE2);
 const Color kNeonCyan=Color(0xFF00FFFF);
 
-void main(){
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  if (!await Artenos.enforce()) return;
   runApp(const AstrolabicaApp());
 }
 
